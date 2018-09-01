@@ -1,0 +1,35 @@
+from DaBirb.commands import CommandHandler
+import discord
+import asyncio
+from itertools import cycle
+client = discord.Client()
+
+Status = ['DaBirb.bot Alpha', 'Do >commands', 'Version 1.3.4']
+
+async def change_status():
+    await client.wait_until_ready()
+    msgs = cycle(Status)
+
+    while not client.is_closed:
+        current_status = next(msgs)
+        await client.change_presence(game=discord.Game(name=current_status))
+        await asyncio.sleep(15)
+
+
+@client.event
+async def on_ready():
+    print('Logged in as')
+    print(client.user.name)
+    print(client.user.id)
+    print('Bot has been Started succesfully')
+
+@client.event
+async def on_message(message):
+    # we do not want the bot to reply to itself
+    if message.author == client.user:
+        return
+
+    await CommandHandler.handle_command(client, message)
+
+client.loop.create_task(change_status())
+client.run('Token')
