@@ -1,2 +1,0 @@
-# DaBirb
-A Bot
