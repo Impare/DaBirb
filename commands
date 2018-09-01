@@ -1,0 +1,115 @@
+import discord
+import random
+from DaBirb.list import Questions
+from random import randint
+class CommandHandler:
+     @staticmethod
+     async def handle_command(client, message):
+            if message.content.startswith(">ping"):
+                await client.send_message(message.channel, "Pong! ")
+
+            if message.content.lower().startswith('>qotd'):
+                embed = discord.Embed(
+                title="Question of the day",
+                color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"), 0),
+                description=random.choice(Questions.list)
+
+                )
+
+                await client.send_message(message.channel, embed=embed)
+
+            if message.content.lower().startswith('>birbthink'):
+                embed = discord.Embed(
+                color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"), 0),
+                description=random.choice(Questions.replies)
+
+                )
+
+                await client.send_message(message.channel, embed=embed)
+
+            if message.content.lower().startswith('>commands'):
+                embed = discord.Embed(
+                title="Commands :eagle:",
+                color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"), 0),
+                description="This is the Command list:\n"
+                            ">commands\n"
+                            ">info\n"
+                            ">help\n"
+                            ">hello\n"
+                            ">qotd\n"
+                            ">website\n"
+                            ">signshop\n"
+                            ">mapchange EU\n"
+                            ">mapchange US\n"
+                            ">mapchange ASIA\n"
+                            ">birbfacts\n"
+                            ">birbthink [message]\n"
+                            "Have Fun!"
+
+                )
+
+                await client.send_message(message.channel, embed=embed)
+
+            if message.content.lower().startswith('>info'):
+                embed = discord.Embed(
+                title="My Info:",
+                color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"), 0),
+                description="Bot Creator Impare#7013 alphy#4203\n"
+                            "Version 1.3.4\n"
+                            "Created at the 13.08.2018\n"
+                            "Next Update comming: Still Updating RN\n"
+                            "Bot Status: Online"
+
+                )
+
+                await client.send_message(message.channel, embed=embed)
+
+            if message.content.lower().startswith('>birbfact'):
+                embed = discord.Embed(
+                title="Here is a Birb fact!",
+                color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"), 0),
+                description=random.choice(Questions.aloe)
+
+                )
+
+                await client.send_message(message.channel, embed=embed)
+
+            if message.content.startswith('>mapchange ASIA'):
+                msg = 'There is no curent date of a map change {0.author.mention}'.format(message)
+                await client.send_message(message.channel, msg)
+
+            if message.content.startswith('>mapchange EU'):
+                msg = 'There is no curent date of a map change {0.author.mention}'.format(message)
+                await client.send_message(message.channel, msg)
+
+            if message.content.startswith('>mapchange US'):
+                msg = 'There is no curent date of a map change {0.author.mention}'.format(message)
+                await client.send_message(message.channel, msg)
+
+            if message.content.startswith('>help'):
+                msg = 'Please go to <#450705208234868756> {0.author.mention}'.format(message)
+                await client.send_message(message.channel, msg)
+
+            if message.content.startswith('>hello'):
+                msg = 'Hello {0.author.name}'.format(message)
+                await client.send_message(message.channel, msg)
+
+            if message.content.startswith('>website'):
+                msg = 'https://www.lyhme.net/'.format(message)
+                await client.send_message(message.channel, msg)
+
+            if message.content.lower().startswith('>signshop'):
+                embed = discord.Embed(
+                title="The Signshop Command list:",
+                color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255),"x"), 0),
+                description="`/signshop + <ID>` -> to make the sign shop\n"
+                            "`/signshop b` -> set buy price\n"
+                            "`/signshop s` -> set selling price\n"
+                            "`/signshop v` -> open the signshop (vault to stock up the items)\n"
+                            "`/signshop -`  -> delete the signshop"
+
+                )
+
+                await client.send_message(message.channel, embed=embed)
+
+                return
