@@ -1,0 +1,40 @@
+# list.py
+class Questions:
+    list = ['What is your favorite doing ingame?',
+    'What is your favorite doing in realife',
+    'What is your favorite car in realife',
+    'What is your favorite car ingame',
+    'What is your favorite color',
+    'What is your favorite song',
+    'What is your favorite game',
+    'How did you find LYHME?',
+    'Since when do you play on LYHME']
+    replies = [
+    'Yes',
+    'No',
+    'Sure',
+    'Nah',
+    'I don\'t think so',
+    'For sure',
+    'Forget about it',
+    'Maybe',
+    'Definitely',
+    'Most likely',
+    'I don\'t know',
+    'Yeah!',
+    'I wouldn\'t',
+    'Sure?']
+    aloe = [
+    'Ostriches have the largest eyes of any land animal',
+    'Ravens are great at mimicking human speech and sounds',
+    'Cardinals like to cover themselves in ants',
+    'Owls devour their prey whole',
+    'Some Ducks sleep with one eye open',
+    'Most Hummingbirds weigh less than a nickel',
+    'Parrots can learn to say hundreds of words',
+    'Eagles eat anything that smell like food',
+    'Lyrebirbs can mimic almost any sound? Even a camera shudder',
+    'Some Birbs like crows are intelligent enought to use improvised tools to hunt',
+    'An eagles foot has about 400psi of gripping power. Thats enough to crush small bones',
+    'Although eagles do have mates for life. they dont hesitate to find another if abadoned',
+    'It takes 5 years for a Bald Eagle to reach maturity']
