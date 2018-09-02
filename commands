@@ -31,13 +31,14 @@ class CommandHandler:
                 embed = discord.Embed(
                 title="Commands :eagle:",
                 color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"), 0),
-                description="This is the Command list:\n"
+                description="Here is the Command list:\n"
                             ">commands\n"
                             ">info\n"
                             ">help\n"
                             ">hello\n"
                             ">qotd\n"
                             ">website\n"
+                            ">hosting\n"
                             ">signshop\n"
                             ">mapchange EU\n"
                             ">mapchange US\n"
@@ -54,11 +55,13 @@ class CommandHandler:
                 embed = discord.Embed(
                 title="My Info:",
                 color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"), 0),
-                description="Bot Creator Impare#7013 alphy#4203\n"
-                            "Version 1.3.4\n"
+                description="Bot Creator Impare#7013\n"
+                            "Version 1.5.8\n"
                             "Created at the 13.08.2018\n"
                             "Next Update comming: Still Updating RN\n"
-                            "Bot Status: Online"
+                            "Bot Status: Online\n"
+                            "Changelog:\n"
+                            "Added more QOTD"
 
                 )
 
@@ -98,6 +101,10 @@ class CommandHandler:
                 msg = 'https://www.lyhme.net/'.format(message)
                 await client.send_message(message.channel, msg)
 
+            if message.content.startswith('>hosting'):
+                msg = 'https://lyhmehosting.com/'.format(message)
+                await client.send_message(message.channel, msg)
+
             if message.content.lower().startswith('>signshop'):
                 embed = discord.Embed(
                 title="The Signshop Command list:",
@@ -107,6 +114,15 @@ class CommandHandler:
                             "`/signshop s` -> set selling price\n"
                             "`/signshop v` -> open the signshop (vault to stock up the items)\n"
                             "`/signshop -`  -> delete the signshop"
+
+                )
+
+                await client.send_message(message.channel, embed=embed)
+
+            if message.content.lower().startswith('test'):
+                embed = discord.Embed(
+                title="THE TEST WORKED OK?",
+                color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255),"x"), 0)
 
                 )
 
