@@ -4,7 +4,7 @@ import asyncio
 from itertools import cycle
 client = discord.Client()
 
-Status = ['DaBirb.bot Alpha', 'Do >commands', 'Version 1.3.4']
+Status = ['DaBirb.bot Alpha', 'Do >commands', 'Version 1.5.8']
 
 async def change_status():
     await client.wait_until_ready()
@@ -15,13 +15,13 @@ async def change_status():
         await client.change_presence(game=discord.Game(name=current_status))
         await asyncio.sleep(15)
 
-
 @client.event
 async def on_ready():
     print('Logged in as')
     print(client.user.name)
     print(client.user.id)
     print('Bot has been Started succesfully')
+
 
 @client.event
 async def on_message(message):
@@ -32,4 +32,4 @@ async def on_message(message):
     await CommandHandler.handle_command(client, message)
 
 client.loop.create_task(change_status())
-client.run('Token')
+client.run('TOKEN')
