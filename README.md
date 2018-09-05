@@ -1,3 +1,3 @@
 # DaBirb
-A Bot
+A Birby bot :)
 Dont USE this WITHOUT permissions given!
