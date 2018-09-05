@@ -1,12 +1,25 @@
-import discord
 import random
-from DaBirb.list import Questions
 from random import randint
+
+import discord
+from DaBirb.list import Questions
 class CommandHandler:
      @staticmethod
      async def handle_command(client, message):
-            if message.content.startswith(">ping"):
-                await client.send_message(message.channel, "Pong! ")
+            if message.content.startswith(">Boop"):
+                await client.send_message(message.channel, "Beep ")
+
+            if message.content.startswith(">mapchange EU"):
+                msg = 'There is no current date of a mapchange'.format(message)
+                await client.send_message(message.channel, msg)
+
+            if message.content.startswith(">mapchange US"):
+                msg = 'There is no current date of a mapchange'.format(message)
+                await client.send_message(message.channel, msg)
+
+            if message.content.startswith(">mapchange ASIA"):
+                msg = 'There is no current date of a mapchange'.format(message)
+                await client.send_message(message.channel, msg)
 
             if message.content.lower().startswith('>qotd'):
                 embed = discord.Embed(
@@ -38,8 +51,6 @@ class CommandHandler:
                             ">help\n"
                             ">hello\n"
                             ">qotd\n"
-                            ">website\n"
-                            ">hosting\n"
                             ">signshop\n"
                             ">mapchange EU\n"
                             ">mapchange US\n"
@@ -78,32 +89,12 @@ class CommandHandler:
 
                 await client.send_message(message.channel, embed=embed)
 
-            if message.content.startswith('>mapchange ASIA'):
-                msg = 'There is no curent date of a map change {0.author.mention}'.format(message)
-                await client.send_message(message.channel, msg)
-
-            if message.content.startswith('>mapchange EU'):
-                msg = 'There is no curent date of a map change {0.author.mention}'.format(message)
-                await client.send_message(message.channel, msg)
-
-            if message.content.startswith('>mapchange US'):
-                msg = 'There is no curent date of a map change {0.author.mention}'.format(message)
-                await client.send_message(message.channel, msg)
-
             if message.content.startswith('>help'):
                 msg = 'Please go to <#450705208234868756> {0.author.mention}'.format(message)
                 await client.send_message(message.channel, msg)
 
             if message.content.startswith('>hello'):
                 msg = 'Hello {0.author.name}'.format(message)
-                await client.send_message(message.channel, msg)
-
-            if message.content.startswith('>website'):
-                msg = 'https://www.lyhme.net/'.format(message)
-                await client.send_message(message.channel, msg)
-
-            if message.content.startswith('>hosting'):
-                msg = 'https://lyhmehosting.com/'.format(message)
                 await client.send_message(message.channel, msg)
 
             if message.content.lower().startswith('>signshop'):
