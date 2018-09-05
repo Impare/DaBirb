@@ -34,6 +34,7 @@ class CommandHandler:
                 description="Here is the Command list:\n"
                             ">commands\n"
                             ">info\n"
+                            ">test\n"
                             ">help\n"
                             ">hello\n"
                             ">qotd\n"
@@ -119,9 +120,9 @@ class CommandHandler:
 
                 await client.send_message(message.channel, embed=embed)
 
-            if message.content.lower().startswith('test'):
+            if message.content.lower().startswith('>test'):
                 embed = discord.Embed(
-                title="THE TEST WORKED OK?",
+                title="The Test Worked :eagle:",
                 color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255),"x"), 0)
 
                 )
@@ -129,3 +130,4 @@ class CommandHandler:
                 await client.send_message(message.channel, embed=embed)
 
                 return
+
