@@ -2,9 +2,14 @@
 class Questions:
     list = [
     'What is your favorite doing ingame?',
+    'If you could choose your job, what kind of job would be your choice/do you want?',
     'What is your favorite car in realife',
+    'Dark chocolate, milk chocolate, or no chocolate?',
     'What is your favorite color',
+    'The earth is doomed to destruction by a big meteor, scheduled to arrive tomorrow. What do you do with today?',
     'What is your favorite song',
+    'Which season is your favorite? (summer, fall, winter, spring) Why do you like that season?',
+    'What is your best subject in school? What is your favorite subject? (It\'s not necessarily the same as your best subject)',
     'What is your favorite game',
     'Are you using Android, iOS, or Windows phone, ooorr do you have no phone? What is the reason of you using that OS? (let\'s not argue which one is better or which one is worse)',
     'How did you find LYHME?',
@@ -14,6 +19,7 @@ class Questions:
     'Since when do you play on LYHME',
     'Do you have pet(s)? If so list your pet(s) and what kind of animal is it?',
     'What is your favorite car ingame',
+    'What part / aspect of the Internet do you wish would disappear?',
     'Do you play/used to play musical instrument(s)? If yes, what is it and is there any reason why you play that instrument?']
     replies = [
     'Yes',
