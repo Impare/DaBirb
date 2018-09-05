@@ -21,7 +21,7 @@ class CommandHandler:
                 msg = 'There is no current date of a mapchange'.format(message)
                 await client.send_message(message.channel, msg)
 
-            if message.content.lower().startswith('>qotd'):
+            if message.content.lower().startswith('>>qotd'):
                 embed = discord.Embed(
                 title="Question of the day",
                 color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"), 0),
@@ -50,7 +50,7 @@ class CommandHandler:
                             ">test\n"
                             ">help\n"
                             ">hello\n"
-                            ">qotd\n"
+                            "~~ER30§~~\n"
                             ">signshop\n"
                             ">mapchange EU\n"
                             ">mapchange US\n"
