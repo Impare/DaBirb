@@ -3,122 +3,147 @@ from random import randint
 
 import discord
 from DaBirb.list import Questions
+
+
 class CommandHandler:
-     @staticmethod
-     async def handle_command(client, message):
-            if message.content.startswith(">Boop"):
-                await client.send_message(message.channel, "Beep ")
+    @staticmethod
+    async def handle_command(client, message):
+        if message.content.startswith(">Boop"):
+            await client.send_message(message.channel, "Beep ")
 
-            if message.content.startswith(">mapchange EU"):
-                msg = 'There is no current date of a mapchange'.format(message)
-                await client.send_message(message.channel, msg)
+        if message.content.startswith(">mapchange EU"):
+            msg = 'There is no current date of a mapchange'.format(message)
+            await client.send_message(message.channel, msg)
 
-            if message.content.startswith(">mapchange US"):
-                msg = 'There is no current date of a mapchange'.format(message)
-                await client.send_message(message.channel, msg)
+        if message.content.startswith(">mapchange US"):
+            msg = 'There is no current date of a mapchange'.format(message)
+            await client.send_message(message.channel, msg)
 
-            if message.content.startswith(">mapchange ASIA"):
-                msg = 'There is no current date of a mapchange'.format(message)
-                await client.send_message(message.channel, msg)
+        if message.content.startswith(">mapchange ASIA"):
+            msg = 'There is no current date of a mapchange'.format(message)
+            await client.send_message(message.channel, msg)
 
-            if message.content.lower().startswith('>>qotd'):
-                embed = discord.Embed(
+        if message.content.lower().startswith('>>qotd'):
+            embed = discord.Embed(
                 title="Question of the day",
-                color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"), 0),
+                color=int(
+                    "0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"),
+                    0),
                 description=random.choice(Questions.list)
 
-                )
+            )
 
-                await client.send_message(message.channel, embed=embed)
+            await client.send_message(message.channel, embed=embed)
 
-            if message.content.lower().startswith('>birbthink'):
-                embed = discord.Embed(
-                color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"), 0),
+        if message.content.lower().startswith('>birbthink'):
+            embed = discord.Embed(
+                color=int(
+                    "0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"),
+                    0),
                 description=random.choice(Questions.replies)
 
-                )
+            )
 
-                await client.send_message(message.channel, embed=embed)
+            await client.send_message(message.channel, embed=embed)
 
-            if message.content.lower().startswith('>commands'):
-                embed = discord.Embed(
+        if message.content.lower().startswith('>commands'):
+            embed = discord.Embed(
                 title="Commands :eagle:",
-                color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"), 0),
+                color=int(
+                    "0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"),
+                    0),
                 description="Here is the Command list:\n"
-                            ">commands\n"
+                            "\n"
+                            "-Fun-\n"
+                            ">hello\n"
+                            ">birbfacts\n"
+                            ">birbthink [message]\n"
+                            "\n"
+                            "-Bot Stuff-\n"
                             ">info\n"
                             ">test\n"
+                            ">commands\n"
+                            "\n"
+                            "-Usefull-\n"
                             ">help\n"
-                            ">hello\n"
-                            "~~ER30§~~\n"
                             ">signshop\n"
                             ">mapchange EU\n"
                             ">mapchange US\n"
                             ">mapchange ASIA\n"
-                            ">birbfacts\n"
-                            ">birbthink [message]\n"
+                            "\n"
+                            "-In Work [Not Avadible]\n"
+                            "~~ER30§~~\n"
+                            "\n"
                             "Have Fun!"
 
-                )
+            )
 
-                await client.send_message(message.channel, embed=embed)
+            await client.send_message(message.channel, embed=embed)
 
-            if message.content.lower().startswith('>info'):
-                embed = discord.Embed(
+        if message.content.lower().startswith('>info'):
+            embed = discord.Embed(
                 title="My Info:",
-                color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"), 0),
+                color=int(
+                    "0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"),
+                    0),
                 description="Bot Creator Impare#7013\n"
-                            "Version 1.5.8\n"
+                            "Version 1.7.9\n"
                             "Created at the 13.08.2018\n"
-                            "Next Update comming: 10.09-/-15.09\n"
+                            "Next Update comming: ***URN***\n"
                             "Bot Status: Online\n"
                             "Changelog:\n"
-                            "Added more QOTD"
+                            "some stuff"
 
-                )
+            )
 
-                await client.send_message(message.channel, embed=embed)
+            await client.send_message(message.channel, embed=embed)
 
-            if message.content.lower().startswith('>birbfact'):
-                embed = discord.Embed(
+        if message.content.lower().startswith('>birbfact'):
+            embed = discord.Embed(
                 title="Here is a Birb fact!",
-                color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"), 0),
+                color=int(
+                    "0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"),
+                    0),
                 description=random.choice(Questions.aloe)
 
-                )
+            )
 
-                await client.send_message(message.channel, embed=embed)
+            await client.send_message(message.channel, embed=embed)
 
-            if message.content.startswith('>help'):
-                msg = 'Please go to <#450705208234868756> {0.author.mention}'.format(message)
-                await client.send_message(message.channel, msg)
+        if message.content.startswith('>help'):
+            msg = 'When you need help with something Ingame or Discord Please go to <#450705208234868756> \n' \
+                  'or is it just a question? than ask ^^'.format(message)
+            await client.send_message(message.channel, msg)
 
-            if message.content.startswith('>hello'):
-                msg = 'Hello {0.author.name}'.format(message)
-                await client.send_message(message.channel, msg)
+        if message.content.startswith('>hello'):
+            msg = 'Hello my Birb friend :eagle: {0.author.name}'.format(message)
+            await client.send_message(message.channel, msg)
 
-            if message.content.lower().startswith('>signshop'):
-                embed = discord.Embed(
+        if message.content.lower().startswith('>signshop'):
+            embed = discord.Embed(
                 title="The Signshop Command list:",
-                color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255),"x"), 0),
+                color=int(
+                    "0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"),
+                    0),
                 description="`/signshop + <ID>` -> to make the sign shop\n"
                             "`/signshop b` -> set buy price\n"
                             "`/signshop s` -> set selling price\n"
                             "`/signshop v` -> open the signshop (vault to stock up the items)\n"
                             "`/signshop -`  -> delete the signshop"
 
-                )
+            )
 
-                await client.send_message(message.channel, embed=embed)
+            await client.send_message(message.channel, embed=embed)
 
-            if message.content.lower().startswith('>test'):
-                embed = discord.Embed(
+        if message.content.lower().startswith('>test'):
+            embed = discord.Embed(
                 title="The Test Worked :eagle:",
-                color=int("0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255),"x"), 0)
+                color=int(
+                    "0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"),
+                    0)
 
-                )
+            )
 
-                await client.send_message(message.channel, embed=embed)
+            await client.send_message(message.channel, embed=embed)
 
-                return
-
+            return
