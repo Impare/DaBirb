@@ -38,4 +38,4 @@ async def on_message(message):
 
 
 client.loop.create_task(change_status())
-client.run('NDcyMTkwMzYwNzkwMjM3MTg0.DlSqEQ.oyMjof93-stm9Y2qJVH6E1SU0fU')
+client.run('-TOKEN-')
