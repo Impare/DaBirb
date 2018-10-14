@@ -1,6 +1,5 @@
 import random
 from random import randint
-
 import discord
 from DaBirb.list import Questions
 
@@ -54,25 +53,26 @@ class CommandHandler:
                     0),
                 description="Here is the Command list:\n"
                             "\n"
-                            "-Fun-\n"
+                            "***-Fun-***\n"
                             ">hello\n"
-                            ">birbfacts\n"
+                            ">birbfact\n"
                             ">birbthink [message]\n"
+                            ">you are a handsome birb\n"
+                            ">what is your favorite color?\n"
+                            ">how are you today\n"
+                            ">what city were you born in?\n"
                             "\n"
-                            "-Bot Stuff-\n"
+                            "***-Bot Stuff-***\n"
                             ">info\n"
                             ">test\n"
                             ">commands\n"
                             "\n"
-                            "-Usefull-\n"
-                            ">help\n"
+                            "***-Usefull-***\n"
                             ">signshop\n"
+                            ">garage\n"
                             ">mapchange EU\n"
                             ">mapchange US\n"
                             ">mapchange ASIA\n"
-                            "\n"
-                            "-In Work [Not Avadible]\n"
-                            "~~ER30§~~\n"
                             "\n"
                             "Have Fun!"
 
@@ -86,13 +86,18 @@ class CommandHandler:
                 color=int(
                     "0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"),
                     0),
-                description="Bot Creator Impare#7013\n"
-                            "Version 1.7.9\n"
-                            "Created at the 13.08.2018\n"
-                            "Next Update comming: ***URN***\n"
-                            "Bot Status: Online\n"
-                            "Changelog:\n"
-                            "some stuff"
+                description="Bot Creator: **Impare#7013**\n"
+                            "\n"
+                            "Version: **1.9.2**\n"
+                            "\n"
+                            "Created: at the **13.08.2018**\n"
+                            "\n"
+                            "Next Update comming: ***SOON***\n"
+                            "\n"
+                            "Bot Status: **Online**\n"
+                            "\n"
+                            "**Changelog:**\n"
+                            "Edited Commands"
 
             )
 
@@ -100,7 +105,7 @@ class CommandHandler:
 
         if message.content.lower().startswith('>birbfact'):
             embed = discord.Embed(
-                title="Here is a Birb fact!",
+                title="Here is a Birb fact enjoy!",
                 color=int(
                     "0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"),
                     0),
@@ -110,9 +115,20 @@ class CommandHandler:
 
             await client.send_message(message.channel, embed=embed)
 
-        if message.content.startswith('>help'):
-            msg = 'When you need help with something Ingame or Discord Please go to <#450705208234868756> \n' \
-                  'or is it just a question? than ask ^^'.format(message)
+        if message.content.startswith('>how are you today'):
+            msg = 'Im fine thx how are you?\n'.format(message)
+            await client.send_message(message.channel, msg)
+
+        if message.content.startswith('>what is your favorite color?'):
+            msg = 'My favorite color is white and black like an eagle :eagle:\n'.format(message)
+            await client.send_message(message.channel, msg)
+
+        if message.content.startswith('>what city were you born in?'):
+            msg = 'Im born in Los Santos [HD Era] like my dad Da Birb Abeovis\n'.format(message)
+            await client.send_message(message.channel, msg)
+
+        if message.content.startswith('>you are a handsome birb'):
+            msg = 'Thats nice ty :eagle: you are handsome to :blush:\n'.format(message)
             await client.send_message(message.channel, msg)
 
         if message.content.startswith('>hello'):
@@ -142,6 +158,28 @@ class CommandHandler:
                     "0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"),
                     0)
 
+            )
+
+            await client.send_message(message.channel, embed=embed)
+
+        if message.content.lower().startswith('>garage'):
+            embed = discord.Embed(
+                title="The Garage Command list:",
+                color=int(
+                    "0x" + format(randint(0, 255), "x") + format(randint(0, 255), "x") + format(randint(0, 255), "x"),
+                    0),
+                description="`/gadd + <Number 0-1>` -> Stores your Locked Vehicle\n"
+                            "`/gtake + <Number 0-1>` -> Takes your Vehicle out of your garage\n"
+                            "`/glist` -> Lists all your vehicles in your garage\n"
+                            "`/gdel + <Number 0-1>` -> Deletes the vehicle in the slot\n"
+                            "\n"
+                            "***Donors have more slots!***\n"
+                            "`Guest` -> 0-1\n"
+                            "`Vip` -> 0-3\n"
+                            "`Vip Plus` -> 0-4\n"
+                            "`Mvp` -> 0-5\n"
+                            "`Mvp Plus` -> 0-6\n"
+                            "`Deluxe` -> 0-7"
             )
 
             await client.send_message(message.channel, embed=embed)
