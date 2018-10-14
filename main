@@ -7,7 +7,7 @@ from DaBirb.commands import CommandHandler
 
 client = discord.Client()
 
-Status = ['DaBirb.bot Alpha', 'Do >commands', 'Version 1.7.9']
+Status = ['DaBirb.bot Beta', 'Do >commands', 'Version 1.9.2']
 
 
 async def change_status():
@@ -38,4 +38,4 @@ async def on_message(message):
 
 
 client.loop.create_task(change_status())
-client.run('TOKEN')
+client.run('NDcyMTkwMzYwNzkwMjM3MTg0.DlSqEQ.oyMjof93-stm9Y2qJVH6E1SU0fU')
